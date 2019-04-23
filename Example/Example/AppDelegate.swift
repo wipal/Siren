@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /// Siren initializes a listener on `didBecomeActiveNotification` to perform version checks.
 
 //        defaultExample()
-        defaultExampleUsingCompletionHandler()
+//        defaultExampleUsingCompletionHandler()
 //        manualExampleWithCompletionHandler()
 //        minimalCustomizationPresentationExample()
 //        forceLocalizationCustomizationPresentationExample()
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        updateSpecificRulesExample()
 //        customAlertRulesExample()
 //        appStoreCountryChangeExample()
-//        complexExample()
+        complexExample()
 
         return true
     }
@@ -244,10 +244,9 @@ private extension AppDelegate {
     func complexExample() {
         let siren = Siren.shared
         siren.presentationManager = PresentationManager(alertTintColor: .brown,
-                                                        appName: "Siren's Complex Rule Example App",
-                                                        alertTitle: "Please, Update Now!",
-                                                        skipButtonTitle: "Click here to skip!",
-                                                        forceLanguageLocalization: .spanish)
+                                                        alertTitle: "Thông báo",
+                                                        skipButtonTitle: "",
+                                                        forceLanguageLocalization: .vietnamese)
         siren.rulesManager = RulesManager(majorUpdateRules: .critical,
                                           minorUpdateRules: .annoying,
                                           patchUpdateRules: .default,
